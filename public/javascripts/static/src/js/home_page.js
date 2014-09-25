@@ -1,0 +1,10 @@
+(function(){
+	$(".block-content").hover(function(){
+		$(this).children().show();
+	},function(){
+		$(this).children().hide();
+	});
+	$(".block-item").on("click",function(){
+		$(this).closest(".block-content").css("height",400);
+	});
+})(jQuery);

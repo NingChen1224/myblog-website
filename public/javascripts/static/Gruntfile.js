@@ -20,7 +20,8 @@ module.exports=function(grunt){
 			},
 			compile:{
 				expand:true,
-				src:["<%= build_js_root %>/*.js",'!<%= build_js_root %>/*.min.js'],
+				cwd:'<%= build_js_root %>',
+				src:["*.js",'!*.min.js'],
 				dest:"<%= build_js_root %>",
 				ext:".min.js"
 			}
