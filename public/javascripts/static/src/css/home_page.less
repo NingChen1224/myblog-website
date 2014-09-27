@@ -16,9 +16,9 @@ header,section,footer{
 	width: 100%;
 	background: #ececec;
 	.h-h-container{
-		width: 1080px;
+		width: 1000px;
 		height: 100px;
-		margin:0 auto;
+		padding-left: 150px;
 		.h-img{
 			height: 90px;
 			width: 90px;
@@ -43,7 +43,7 @@ header,section,footer{
 .h-container{
 	width: 1080px;
 	margin:100px auto 0;
-	background: #999;
+	background: #ececec;
 	.h-nav{
 		width: 100%;
 		ul{
@@ -66,4 +66,37 @@ header,section,footer{
 	.h-content{
 		overflow: auto;
 	}	
+}
+.nav-leftbar{
+	position: fixed;
+	left: 0;
+	top: 100px;
+	width: 150px;
+	background: #ececec;
+	.nav-container{
+		margin: 0;
+		padding: 0;
+		list-style: none;
+		li{
+			padding: 10px 5px;
+			text-align: center;
+			font-size: 16px;
+			-webkit-transition:all 1s;
+			-mox-transition:all 1s;
+			transition:all 1s;
+			a{
+				text-decoration: none;
+			}
+			&:hover{
+				background: #999;
+
+			}
+			&.active{
+				background: #999;
+				a{
+					color:orange;
+				}
+			}
+		}
+	}
 }

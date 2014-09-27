@@ -44,7 +44,7 @@ module.exports=function(grunt){
 			},
 			js:{
 				files:['<%= js_root %>/*.js'],
-				tasks:['browserify:compile']
+				tasks:['browserify:compile','uglify:compile']
 			},
 			html:{
 				files:['../../static/*.html'],

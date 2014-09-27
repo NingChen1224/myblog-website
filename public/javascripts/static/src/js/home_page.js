@@ -1,10 +1,8 @@
-(function(){
-	$(".block-content").hover(function(){
-		$(this).children().show();
-	},function(){
-		$(this).children().hide();
-	});
-	$(".block-item").on("click",function(){
-		$(this).closest(".block-content").css("height",400);
-	});
-})(jQuery);
+$(function(){
+	function initLeftBar(){
+		var $_window = $(window),
+			_height = $_window.height();
+		$('.nav-leftbar').height(_height - 100);
+	}
+	initLeftBar();
+});
