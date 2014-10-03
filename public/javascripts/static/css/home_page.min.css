@@ -1,9 +1,11 @@
+pre{font-family:Menlo,Monaco,Consolas,"Courier New",monospace}
 body{font-family:'微软雅黑';font-size:12px;background:#fff;margin:0;padding:0}
 header,section,footer{display:block}
 .h-header{position:fixed;left:0;top:0;height:100px;width:100%;background:#ececec}.h-header .h-h-container{width:1000px;height:100px;padding-left:150px}.h-header .h-h-container .h-img{height:90px;width:90px;margin-top:5px;display:inline-block;float:left}.h-header .h-h-container .h-img img{width:90px;height:90px}
 .h-header .h-h-container .h-desc{display:inline-block;height:20px;width:800px;padding:70px 0 0 20px;float:left;font-size:16px}
 .h-container{width:1080px;margin:100px auto 0;background:#ececec}.h-container .h-nav{width:100%}.h-container .h-nav ul{list-style:none;margin:0;padding:0;font-size:14px}.h-container .h-nav ul li{display:inline}.h-container .h-nav ul li a{display:inline-block;height:20px;padding:5px 10px;cursor:pointer;text-decoration:none}
 .h-container .h-content{overflow:auto}
-.nav-leftbar{position:fixed;left:0;top:100px;width:150px;background:#ececec}.nav-leftbar .nav-container{margin:0;padding:0;list-style:none}.nav-leftbar .nav-container li{padding:10px 5px;text-align:center;font-size:16px;-webkit-transition:all 1s;-mox-transition:all 1s;transition:all 1s}.nav-leftbar .nav-container li a{text-decoration:none}
-.nav-leftbar .nav-container li:hover{background:#999}
+.nav-leftbar{position:fixed;left:0;top:100px;width:150px;background:#ececec;-weblit-transition:all 2s;-moz-transition:all 2s;transition:all 2s}.nav-leftbar .nav-container{margin:0;padding:0;list-style:none}.nav-leftbar .nav-container li{padding:10px 5px;text-align:center;font-size:20px;-webkit-transition:all 1s;-mox-transition:all 1s;transition:all 1s}.nav-leftbar .nav-container li a{text-decoration:none;color:#28a4c9;font-family:Georgia, Arial, Tahoma, Geneva}.nav-leftbar .nav-container li a:visited{color:#28a4c9}
+.nav-leftbar .nav-container li:hover{background:#999}.nav-leftbar .nav-container li:hover a{color:orange}
 .nav-leftbar .nav-container li.active{background:#999}.nav-leftbar .nav-container li.active a{color:orange}
+.c-container{margin:100px 0 0 150px;padding:20px 10px}.c-container .footer{margin-top:16px;text-align:center}

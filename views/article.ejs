@@ -10,13 +10,12 @@
         <% } %>
     </ul>
 </div>
-
+<div style="margin-left:200px;height: auto;border: 1px solid transparent;border-radius: 10px;padding-top: 0.5em">
 <% if(typeof articles !== "undefined" && articles.length > 0){ %>
 <% for(var i = 0;i < articles.length;i++){ %>
 <% var _content = articles[i].info.content; %>
 <div class="section">
-    <h3><a href='/article/<%= articles[i]._id %>' target="_blank"><%= articles[i].title %></a></h3>
-
+    <h2><a href='/article/<%= articles[i]._id %>' target="_blank"><%= articles[i].title %></a></h2>
     <div class="article-info">
         <span title="最后更新时间"><i class="pubtime"></i><%= articles[i].info.created_time %></span>
         <span title="查看分类:<%= articles[i].info.parent_tag %>"><i class="category"></i><%= articles[i].info.parent_tag %></span>
@@ -37,6 +36,31 @@
     </div>
 </div>
 <% } %>
+<ul class="pagination">
+        <%if(page>1){%>
+        <li><a href="/article?page=<%=page-1%>">&laquo;</a></li>
+        <%}else{%>
+        <li><a href="/article">&laquo;</a></li>
+        <%}%>
+        <% var _page = total / 5 + 1; %>
+        <% if (total % 5 == 0){ %>
+        <% _page = total / 5; %>
+        <% } %>
+        <% for(var i = 1;i <= _page;i++){ %>
+        <% if(page == i){ %>
+        <li class="active"><a href="/article?page=<%= i %>"><%= i %> </a></li>
+        <% }else{ %>
+        <li><a href="/article?page=<%= i %>"><%= i %> </a>
+        </li>
+        <% } %>
+        <% } %>
+        <%if(page<=_page-1){%>
+        <li><a href="/article?page=<%=page+1%>">&raquo;</a></li>
+        <%}else{%>
+        <li><a href="/article">&raquo;</a></li>
+        <%}%>
+    </ul>
+</div>
 <div class="modal fade" style="display:none;" id="modal">
     <div class="modal-dialog">
         <div class="modal-content">
@@ -85,20 +109,4 @@
         });
     };
 </script>
-<div style="margin-left: 0;">
-    <ul class="page">
-        <% var _page = total / 5 + 1; %>
-        <% if (total % 5 == 0){ %>
-        <% _page = total / 5; %>
-        <% } %>
-        <% for(var i = 1;i <= _page;i++){ %>
-        <% if(page == i){ %>
-        <li class="active"><a href="/article?page=<%= i %>"><%= i %> </a></li>
-        <% }else{ %>
-        <li><a href="/article?page=<%= i %>"><%= i %> </a>
-        </li>
-        <% } %>
-        <% } %>
-    </ul>
-</div>
 <% } %>

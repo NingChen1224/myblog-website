@@ -1,3 +1,7 @@
+@aLinkColor:#28a4c9;
+pre{
+	font-family: Menlo,Monaco,Consolas,"Courier New",monospace;
+}
 body{
 	font-family: '微软雅黑';
 	font-size: 12px;
@@ -73,6 +77,9 @@ header,section,footer{
 	top: 100px;
 	width: 150px;
 	background: #ececec;
+	-weblit-transition:all 2s;
+	-moz-transition:all 2s;
+	transition:all 2s;
 	.nav-container{
 		margin: 0;
 		padding: 0;
@@ -80,16 +87,23 @@ header,section,footer{
 		li{
 			padding: 10px 5px;
 			text-align: center;
-			font-size: 16px;
+			font-size: 20px;
 			-webkit-transition:all 1s;
 			-mox-transition:all 1s;
 			transition:all 1s;
 			a{
 				text-decoration: none;
+				color:@aLinkColor;
+				font-family: Georgia, Arial, Tahoma, Geneva;
+				&:visited{
+					color:@aLinkColor;
+				}
 			}
 			&:hover{
 				background: #999;
-
+				a{
+					color:orange;
+				}
 			}
 			&.active{
 				background: #999;
@@ -98,5 +112,13 @@ header,section,footer{
 				}
 			}
 		}
+	}
+}
+.c-container{
+	margin:100px 0 0 150px;
+	padding: 20px 10px;
+	.footer{
+		margin-top: 16px;
+		text-align: center;
 	}
 }

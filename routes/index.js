@@ -23,12 +23,15 @@ var html_entitis = require("html-entities");
 //qiniu.conf.SECRET_KEY = qiniuKey.secret_key;
 module.exports = function (app) {
     app.get('/', function (req, res) {
+        res.render('home_page',{layout:'home_page_layout'});
+    });
+    app.get('/resume',function(req,res){
         res.render('resume', {title: 'Stay hunger, stay foolish',
             active: 'home',
             username: req.session.username,
             layout: 'resume_layout'
         });
-    });
+    })
     app.get('/article/category/:type', function (req, res) {
         var category = req.params.type;
         category = category.trim();
